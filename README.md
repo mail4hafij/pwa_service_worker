@@ -15,7 +15,7 @@ The idea is to have always network first service worker with the following crite
  * ---------------------------------------------------------------------------------------*
  * DEVELOPED BY                                                                           *
  * Mohammad Hafijur Rahman                                                                *
- * ------------------------------------------------------------------------------------ **/
+  * ------------------------------------------------------------------------------------ **/
 
 const cacheName = "version-3";
 
@@ -29,7 +29,7 @@ self.addEventListener("install", async (e) => {
 
 self.addEventListener("activate", (e) => {
   // Removing all old cache when
-  // activating new service worker
+  // activating new service worker.
   caches.delete("version-1");
   caches.delete("version-2");
   self.clients.claim();
@@ -49,6 +49,7 @@ async function networkAndCache(req) {
     // So any third party cross origin requests
     // (i.e., google analytics and maps) should be avoided.
     if (url.origin === self.location.origin) {
+     
       // No caching for POST requests.
       if (req.method !== "POST") {
         // Keep cache up to date.
@@ -56,9 +57,12 @@ async function networkAndCache(req) {
         await cache.put(req, fresh.clone());
         return fresh;
       }
+     
     }
-    // No cache for these requests.
+   
+    // No cache for these requests (cross-origin or post).
     return await fetch(req);
+   
   } catch (e) {
     // Network request did not go through
     // Try to pull from the cache
