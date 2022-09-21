@@ -4,6 +4,7 @@ The idea is to have always network first service worker with the following crite
 * If the fetch from network fails only then should we fetch from cache. 
 * The cache must be always up to date with the latest version from the network. 
 * The cross origin third party requests (i.e., Google analytics, Maps, etc) should not be cached. 
+* No POST request should be cached.
 * Remove old caches when activating new service worker.
 
 ## The network first service worker
