@@ -8,7 +8,7 @@ The idea is to have always network first service worker with the following crite
 
 ## The network first service worker
 ```
-/** -------------------------------------------------------------------------------------*
+/** --------------------------------------------------------------------------------------*
  * Version: 4.0                                                                           *
  * Source: https://github.com/mail4hafij/pwa_service_worker                               *
  * License: Free to use                                                                   *
