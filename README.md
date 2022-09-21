@@ -29,7 +29,7 @@ self.addEventListener("install", async (e) => {
 });
 
 self.addEventListener("activate", (e) => {
-  // Removing all old cache when
+  // Removing all old caches when
   // activating new service worker.
   caches.delete("version-1");
   caches.delete("version-2");
