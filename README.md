@@ -24,12 +24,12 @@ self.addEventListener("install", async (e) => {
   // Not adding any cache when installing.
   // Otherwise - updates for those caches (added when installed)
   // will not be possible until clients uninstall or deregister
-  // service worker.
+  // service worker from thei devices.
   return self.skipWaiting();
 });
 
 self.addEventListener("activate", (e) => {
-  // Removing all old cache when
+  // Removing all old caches when
   // activating new service worker.
   caches.delete("version-1");
   caches.delete("version-2");
@@ -58,7 +58,7 @@ async function networkAndCache(req) {
         await cache.put(req, fresh.clone());
         return fresh;
       }
-     
+      
     }
    
     // No cache for these requests (cross-origin or post).
