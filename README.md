@@ -21,7 +21,7 @@ const cacheName = "version-3";
 
 self.addEventListener("install", async (e) => {
   // Not adding any cache when installing.
-  // In that case - updates for those caches (added when installed)
+  // Otherwise - updates for those caches (added when installed)
   // will not be possible until clients uninstall or deregister
   // service worker.
   return self.skipWaiting();
