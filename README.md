@@ -15,7 +15,6 @@ The idea is to have always network first service worker with the following crite
  * ---------------------------------------------------------------------------------------*
  * DEVELOPED BY                                                                           *
  * Mohammad Hafijur Rahman                                                                *
- * mail4hafij@yahoo.com, mail4hafij@gmail.com                                             *
  * ------------------------------------------------------------------------------------ **/
 
 const cacheName = "version-3";
