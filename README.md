@@ -1,5 +1,5 @@
 # pwa_service_worker
-The idea is to have always network first service worker with the following criterias - 
+The idea is to have a network first service worker with the following criterias - 
 
 * If the fetch from network fails only then should we fetch from cache. 
 * The cache must be always up to date with the latest version from the network. 
