@@ -24,7 +24,7 @@ self.addEventListener("install", async (e) => {
   // Not adding any cache when installing.
   // Otherwise - updates for those caches (added when installed)
   // will not be possible until clients uninstall or deregister
-  // service worker from thei devices.
+  // service worker from their devices.
   return self.skipWaiting();
 });
 
